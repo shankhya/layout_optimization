@@ -1,44 +1,27 @@
+#New GA
 import random
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Define the operational sequence and machine groups
-operational_sequence = ["Paper storage section", "Cutting Machine 1", "Printing Machine CD 102",
-                        "Cutting Machine 2", "Stripping Machine", "Punching Machine 1",
-                        "Laminating Machine", "Folding Machine 3", "Folder Gluer 1",
-                        "Finished goods section"]
+operational_sequence = ["Cutting", "Printing machine",
+    "Inspection", "LaminatingAuto", "Punching",
+    "Stripping", "FolderGluer", "Finishedgoods"]
 
 machine_groups = [
-    ["Printing Machine CD 102", "Printing Machine SM 102", "Printing Machine Ryobi"],
-    ["Cutting Machine 1", "Cutting Machine 2"],
-    ["Folding Machine 1", "Folding Machine 2", "Folding Machine 3"],
-    ["Folder Gluer 1", "Folder Gluer 2"]
+    ["Printing machine", "Cutting"]
 ]
 
 # Define machine positions and dimensions
 machine_positions = {
-    "Printing Machine CD 102": (0, 0),
-    "Printing Machine SM 102": (0, 23),
-    "Printing Machine Ryobi": (0, 46),
-    "Cutting Machine 1": (13.5, 69),
-    "Paper storage section": (22.5, 112.5),
-    "Stripping Machine": (99, 0),
-    "Punching Machine 1": (99, 27),
-    "Punching Machine 2": (99, 58.5),
-    "Laminating Machine": (85.5, 85.5),
-    "Cutting Machine 2": (112.5, 112.5),
+    "Printing machine": (0, 0),
+    "Cutting": (13.5, 69),
+    "Stripping": (99, 0),
+    "Punching": (99, 27),
+    "LaminatingAuto": (85.5, 85.5),
     "Inspection": (153, 0),
-    "Window Patch": (193.5, 0),
-    "Stairs": (214.2, 0),
-    "Folder Gluer 1": (148.5, 31.5),
-    "Folder Gluer 2": (148.5, 45),
-    "Folding Machine 3": (148.5, 58.5),
-    "ManualLaminator": (148.5, 67.5),
-    "Folding Machine 2": (148.5, 90),
-    "Folding Machine 1": (186.3, 90),
-    "SaddleStitcher": (135, 112.5),
-    "Offlinecoater": (223.2, 112.5),
-    "Finished goods section": (223.2, 22.5)
+    "FolderGluer": (148.5, 31.5),
+    "Finishedgoods": (223.2, 22.5)
 }
 
 # Specify the pathway width
@@ -184,3 +167,4 @@ plt.ylabel('Fitness Score')
 plt.grid(True)
 plt.legend()
 plt.show()
+
